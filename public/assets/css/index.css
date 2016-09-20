@@ -1,0 +1,24 @@
+.dataButtonResults{
+	float: right;
+	border-radius: 5px;
+	color: #4377B4;
+	margin: 5px;
+}
+
+.dataButtonSearch{
+	border-radius: 5px;
+	color: #4377B4;
+	margin: 5px;
+}
+
+.dataButtonSaved{
+	float: right;
+	border-radius: 5px;
+	color: #4377B4;
+	margin: 5px;
+}
+
+.jumbotron{
+	background-color: #20315A;
+	color: white;
+}

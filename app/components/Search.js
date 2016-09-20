@@ -2,13 +2,10 @@ var React = require('react');
 var Results = require('./Results');
 
 var Search = React.createClass({
-
-	//React.DOM.label( {"for": "name"}, "name");
-
 	render: function () {
 		return (
 
-<div className="container">
+<div>
 	<div className="row">
 		<div className="col-sm-12">
 		<br />
@@ -37,8 +34,8 @@ var Search = React.createClass({
 					  </div>
 
 					  <div className="text-center">
-					  <button type="submit" className="btn btn-default" id="runSearch"><i className="fa fa-search"></i>Search</button>
-  					  <button type="button" className="btn btn-default" id="clearAll"><i className="fa fa-trash"></i>Clear Results</button>
+					  <button type="submit" className="btn btn-default" id="runSearch" className="dataButtonSearch"><i className="fa fa-search"></i>Search</button>
+  					  <button type="button" className="btn btn-default" id="clearAll" className="dataButtonSearch"><i className="fa fa-trash"></i>Clear Results</button>
   					  </div>
 
 					</form>
@@ -46,7 +43,7 @@ var Search = React.createClass({
 			</div>
 		</div>
 	</div>
-<h1>Hello</h1>
+					<Results />
 
 </div>
 		);

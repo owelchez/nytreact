@@ -21435,7 +21435,6 @@
 
 	var React = __webpack_require__(1);
 	var Search = __webpack_require__(173);
-	var Results = __webpack_require__(174);
 
 	var Main = React.createClass({
 		displayName: 'Main',
@@ -21444,22 +21443,18 @@
 		render: function render() {
 			return React.createElement(
 				'div',
-				null,
+				{ className: 'container' },
 				React.createElement(
 					'div',
-					{ className: 'container' },
+					{ className: 'jumbotron' },
 					React.createElement(
-						'div',
-						{ className: 'jumbotron' },
+						'h1',
+						{ className: 'text-center' },
 						React.createElement(
-							'h1',
-							{ className: 'text-center' },
-							React.createElement(
-								'strong',
-								null,
-								React.createElement('i', { className: 'fa fa-newspaper-o' }),
-								' New York Times'
-							)
+							'strong',
+							null,
+							React.createElement('i', { className: 'fa fa-newspaper-o' }),
+							' New York Times'
 						)
 					)
 				),
@@ -21476,19 +21471,18 @@
 
 	'use strict';
 
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 	var React = __webpack_require__(1);
 	var Results = __webpack_require__(174);
 
 	var Search = React.createClass({
 		displayName: 'Search',
 
-
-		//React.DOM.label( {"for": "name"}, "name");
-
 		render: function render() {
 			return React.createElement(
 				'div',
-				{ className: 'container' },
+				null,
 				React.createElement(
 					'div',
 					{ className: 'row' },
@@ -21554,13 +21548,13 @@
 										{ className: 'text-center' },
 										React.createElement(
 											'button',
-											{ type: 'submit', className: 'btn btn-default', id: 'runSearch' },
+											_defineProperty({ type: 'submit', className: 'btn btn-default', id: 'runSearch' }, 'className', 'dataButtonSearch'),
 											React.createElement('i', { className: 'fa fa-search' }),
 											'Search'
 										),
 										React.createElement(
 											'button',
-											{ type: 'button', className: 'btn btn-default', id: 'clearAll' },
+											_defineProperty({ type: 'button', className: 'btn btn-default', id: 'clearAll' }, 'className', 'dataButtonSearch'),
 											React.createElement('i', { className: 'fa fa-trash' }),
 											'Clear Results'
 										)
@@ -21569,7 +21563,8 @@
 							)
 						)
 					)
-				)
+				),
+				React.createElement(Results, null)
 			);
 		}
 	});
@@ -21578,32 +21573,145 @@
 
 /***/ },
 /* 174 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	/*var React = require('react');
-	var Search = require('./Search');
+	'use strict';
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	var React = __webpack_require__(1);
+	var Saved = __webpack_require__(175);
 
 	var Results = React.createClass({
-		render: function () {
-			return (
+		displayName: 'Results',
 
-
-	<div>
-					<div className="container">
-
-						<div className="jumbotron">
-							<h1 className="text-center"><strong><i className="fa fa-newspaper-o"></i> New York Times</strong></h1>
-						</div>
-					</div>
-					
-					<Search />
-	</div>
+		render: function render() {
+			return React.createElement(
+				'div',
+				null,
+				React.createElement(
+					'div',
+					{ className: 'row' },
+					React.createElement(
+						'div',
+						{ className: 'col-sm-12' },
+						React.createElement('br', null),
+						React.createElement(
+							'div',
+							{ className: 'panel panel-primary' },
+							React.createElement(
+								'div',
+								{ className: 'panel-heading' },
+								React.createElement(
+									'h3',
+									{ className: 'panel-title text-center' },
+									React.createElement(
+										'strong',
+										null,
+										React.createElement('i', { className: 'fa fa-table' }),
+										'Results'
+									)
+								)
+							),
+							React.createElement(
+								'div',
+								{ className: 'panel-body', id: 'wellSection' },
+								React.createElement(
+									'div',
+									{ className: 'panel panel-default' },
+									React.createElement(
+										'div',
+										{ className: 'panel-body' },
+										React.createElement(
+											'a',
+											{ target: '_blank', href: 'http://www.nytimes.com/2016/10/08/fashion/katie-holmes-rooney-mara-chloe-grace-moretz-cartier-new-york-fashion-week-kickoff.html' },
+											'Cartier’s Fifth Avenue Mansion reopens; Nelly Furtado performs at the Top of the Standard to a fashion crowd.'
+										),
+										React.createElement(
+											'button',
+											_defineProperty({ className: 'btn btn-primary btn-sm' }, 'className', 'dataButtonResults'),
+											'Save'
+										)
+									)
+								)
+							)
+						)
+					)
+				),
+				React.createElement(Saved, null)
 			);
 		}
 	});
 
-	module.exports = Results;*/
+	module.exports = Results;
+
+/***/ },
+/* 175 */
+/***/ function(module, exports, __webpack_require__) {
+
 	"use strict";
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	var React = __webpack_require__(1);
+
+	var Saved = React.createClass({
+		displayName: "Saved",
+
+		render: function render() {
+			return React.createElement(
+				"div",
+				null,
+				React.createElement(
+					"div",
+					{ className: "panel panel-primary" },
+					React.createElement(
+						"div",
+						{ className: "panel-heading" },
+						React.createElement(
+							"h3",
+							{ className: "panel-title text-center" },
+							React.createElement(
+								"strong",
+								null,
+								React.createElement("i", { className: "fa fa-table" }),
+								"Saved Articles"
+							)
+						)
+					),
+					React.createElement(
+						"div",
+						{ className: "panel-body", id: "wellSection" },
+						React.createElement(
+							"div",
+							{ className: "panel panel-default" },
+							React.createElement(
+								"div",
+								{ className: "panel-body" },
+								React.createElement(
+									"a",
+									{ target: "_blank", href: "http://www.nytimes.com/2016/10/08/fashion/katie-holmes-rooney-mara-chloe-grace-moretz-cartier-new-york-fashion-week-kickoff.html" },
+									"Cartier’s Fifth Avenue Mansion reopens; Nelly Furtado performs at the Top of the Standard to a fashion crowd."
+								),
+								React.createElement(
+									"button",
+									_defineProperty({ className: "btn btn-danger btn-sm" }, "className", "dataButtonSaved"),
+									"Delete"
+								)
+							)
+						)
+					)
+				),
+				React.createElement(
+					"div",
+					{ className: "row" },
+					React.createElement("div", { className: "col-sm-12" })
+				)
+			);
+		}
+	});
+
+	module.exports = Saved;
 
 /***/ }
 /******/ ]);
