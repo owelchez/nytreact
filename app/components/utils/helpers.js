@@ -10,21 +10,12 @@ var helpers = {
 		console.log(article);
 
 		var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + nyTimesAPI + "&q=" + searchArticle;
+
+      return axios.get(queryURL).then(function(response){
+        console.log(response);
+        return response.data.results[0].formatted;
+    })
 	}
 }
 
-/*
-var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-url += '?' + $.param({
-  'api-key': "6c0dead18a674567a06bf94aed10eb34",
-  'q': "garifuna"
-});
-$.ajax({
-  url: url,
-  method: 'GET',
-}).done(function(result) {
-  console.log(result);
-}).fail(function(err) {
-  throw err;
-});
-*/
+module.exports = helpers;

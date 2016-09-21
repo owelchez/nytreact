@@ -3,7 +3,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 
 // Include the main component
-var Main = require('./Components/Main');
+var Main = require('./components/Main');
 
 // This here is to render our app "Parent"
 ReactDOM.render(

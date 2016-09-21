@@ -22,7 +22,7 @@ app.use(express.static('./public'));
 
 // -------------------------------------------------
 
-mongoose.connect('mongodb://localhost/nytimes');
+mongoose.connect('mongodb://localhost/nytreact');
 var db = mongoose.connection;
 
 db.on('error', function (err) {
@@ -37,20 +37,21 @@ db.once('open', function () {
 // -------------------------------------------------
 
 app.get('/', function(req, res){
+
   res.sendFile('./public/index.html');
 });
 
 
-app.get('/api/', function(req, res) {
-  db.find()(function(err, doc){
-    if(err){
-      console.log(err);
-    }
-    else {
-      res.send(doc);
-    }
-  })
+app.post('/api/saved', function(req, res){
+
 });
+
+
+
+
+
+
+
 
 // -------------------------------------------------
 

@@ -1,5 +1,5 @@
 var React = require('react');
-var Saved = require('./Children/Saved');
+var Saved = require('./Saved');
 
 var Results = React.createClass({
 	render: function () {

@@ -1,5 +1,5 @@
 var React = require('react');
-var Results = require('./Children/Results');
+var Results = require('./Results');
 
 var Search = React.createClass({
 	render: function () {
